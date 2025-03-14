@@ -1,4 +1,4 @@
-namespace backend
+namespace MyCovenantPath1
 {
     public class WeatherForecast
     {
