@@ -1,0 +1,144 @@
+.container {
+  width: 100%;
+  min-height: screen;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.wrapper {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 393px;
+  display: flex;
+}
+
+.statusBar {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 21px 16px 7px;
+  display: flex;
+}
+
+.time {
+  color: #000;
+  font-size: 17px;
+  font-weight: 590;
+}
+
+.spacer {
+  width: 124px;
+}
+
+.mainContent {
+  flex-direction: column;
+  align-items: center;
+  gap: 33px;
+  width: 100%;
+  padding-top: 41px;
+  padding-left: 14px;
+  padding-right: 14px;
+  display: flex;
+}
+
+.title {
+  color: #000;
+  width: 100%;
+  font-family: Noto Rashi Hebrew, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contentWrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  display: flex;
+}
+
+.formContainer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  display: flex;
+}
+
+.formTitle {
+  color: #000;
+  font-family: Noto Rashi Hebrew, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.formFields {
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  display: flex;
+}
+
+.inputGroup {
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+}
+
+.inputLabel {
+  color: #000;
+  font-family: Noto Rashi Hebrew, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input {
+  background-color: #d9d9d9;
+  border-radius: 2px;
+  width: 100%;
+  height: 35px;
+}
+
+.continueButton {
+  color: #000;
+  background-color: #a1b9cb;
+  border-width: 1px;
+  border-color: #000;
+  border-radius: 2px;
+  min-width: 90px; /* Increased from 71px */
+  padding: 6px 12px; /* Added padding instead of fixed height */
+  font-family: Noto Rashi Hebrew, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-align: center; /* Centers the text */
+  cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+.linksContainer {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  gap: 10px; /* Added gap between buttons */
+}
+
+.createAccount,
+.forgotPassword {
+  color: #000;
+  background-color: #7a9fb929;
+  border-width: 1px;
+  border-color: #000;
+  min-width: 142px; /* Changed from fixed width to minimum width */
+  padding: 6px 12px; /* Added padding instead of fixed height */
+  font-family: Noto Rashi Hebrew, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-align: center; /* Centers the text */
+  cursor: pointer; /* Shows pointer cursor on hover */
+  flex: 1; /* Makes buttons take equal space */
+}
+
