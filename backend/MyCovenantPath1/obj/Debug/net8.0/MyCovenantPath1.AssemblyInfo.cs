@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyCovenantPath1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71d7d05a883cfd06cbd2cc10c24e581857c4c28b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c694a3e7e3bba5e3d9c71dbd0b10be019067ac24")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyCovenantPath1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyCovenantPath1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
