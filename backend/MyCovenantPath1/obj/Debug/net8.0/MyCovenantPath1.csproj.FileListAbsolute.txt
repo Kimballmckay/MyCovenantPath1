@@ -129,7 +129,6 @@ C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCove
 C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MyCovenantPath1.props
 C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MyCovenantPath1.props
 C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\MyCovena.85366866.Up2Date
 C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\MyCovenantPath1.dll
 C:\Users\dalle\OneDrive\Desktop\Dallen\BYU\Winter 2025\401\MyCovenantPath\MyCovenantPath1\backend\MyCovenantPath1\obj\Debug\net8.0\refint\MyCovenantPath1.dll

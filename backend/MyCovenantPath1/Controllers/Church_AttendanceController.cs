@@ -17,7 +17,6 @@ public class Church_AttendanceController : ControllerBase
     public async Task<IActionResult> Get()
     {
         var attendance = await _context.Church_Attendances
-            .Include(a => a.User)
             .Select(a => new
             {
                 a.Date,
