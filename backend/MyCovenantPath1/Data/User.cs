@@ -1,6 +1,6 @@
 ﻿namespace MyCovenantPath1.Data
 {
-    public class Goals
+    public class User
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MyCovenantPath1.Data
 {
-    public class TempleAttendance
+    public class Church_Attendance
     {
     }
 }

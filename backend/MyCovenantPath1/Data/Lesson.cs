@@ -1,6 +1,6 @@
 ﻿namespace MyCovenantPath1.Data
 {
-    public class Studies
+    public class Lesson
     {
     }
 }
