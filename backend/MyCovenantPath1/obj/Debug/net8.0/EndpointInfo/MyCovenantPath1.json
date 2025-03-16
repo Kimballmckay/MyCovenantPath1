@@ -5,6 +5,19 @@
     "version": "1.0"
   },
   "paths": {
+    "/Church_Attendance": {
+      "get": {
+        "tags": [
+          "Church_Attendance"
+        ],
+        "operationId": "GetChurch_Attendance",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [

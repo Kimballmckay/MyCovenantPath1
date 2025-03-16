@@ -1,5 +1,16 @@
 [
   {
+    "ContainingType": "Church_AttendanceController",
+    "Method": "Get",
+    "RelativePath": "Church_Attendance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetChurch_Attendance"
+  },
+  {
     "ContainingType": "MyCovenantPath1.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
