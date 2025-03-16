@@ -453,11 +453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dalle\\OneDrive\\Desktop\\Dallen\\BYU\\Winter 2025\\401\\MyCovenantPath\\MyCovenantPath1\\MyCovenantPath1\\MyCovenantPath1\\MyCovenantPath1.csproj",
+      "projectUniqueName": "C:\\Users\\dalle\\OneDrive\\Desktop\\Dallen\\BYU\\Winter 2025\\401\\MyCovenantPath\\MyCovenantPath1\\backend\\MyCovenantPath1\\MyCovenantPath1.csproj",
       "projectName": "MyCovenantPath1",
-      "projectPath": "C:\\Users\\dalle\\OneDrive\\Desktop\\Dallen\\BYU\\Winter 2025\\401\\MyCovenantPath\\MyCovenantPath1\\MyCovenantPath1\\MyCovenantPath1\\MyCovenantPath1.csproj",
+      "projectPath": "C:\\Users\\dalle\\OneDrive\\Desktop\\Dallen\\BYU\\Winter 2025\\401\\MyCovenantPath\\MyCovenantPath1\\backend\\MyCovenantPath1\\MyCovenantPath1.csproj",
       "packagesPath": "C:\\Users\\dalle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dalle\\OneDrive\\Desktop\\Dallen\\BYU\\Winter 2025\\401\\MyCovenantPath\\MyCovenantPath1\\MyCovenantPath1\\MyCovenantPath1\\obj\\",
+      "outputPath": "C:\\Users\\dalle\\OneDrive\\Desktop\\Dallen\\BYU\\Winter 2025\\401\\MyCovenantPath\\MyCovenantPath1\\backend\\MyCovenantPath1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
