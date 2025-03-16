@@ -11,24 +11,69 @@
     "EndpointName": "GetChurch_Attendance"
   },
   {
-    "ContainingType": "MyCovenantPath1.Controllers.WeatherForecastController",
+    "ContainingType": "GoalController",
     "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "RelativePath": "Goal",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MyCovenantPath1.WeatherForecast, MyCovenantPath1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": [],
+    "EndpointName": "GetGoal"
+  },
+  {
+    "ContainingType": "LessonController",
+    "Method": "Get",
+    "RelativePath": "Lesson",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetLessons"
+  },
+  {
+    "ContainingType": "LessonTaughtController",
+    "Method": "Get",
+    "RelativePath": "LessonTaught",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetLessonTaught"
+  },
+  {
+    "ContainingType": "StudyController",
+    "Method": "Get",
+    "RelativePath": "Study",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetStudies"
+  },
+  {
+    "ContainingType": "Temple_AttendanceController",
+    "Method": "Get",
+    "RelativePath": "Temple_Attendance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetTemple_Attendance"
+  },
+  {
+    "ContainingType": "UserController",
+    "Method": "Get",
+    "RelativePath": "User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetUser"
   }
 ]
