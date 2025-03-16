@@ -2,7 +2,7 @@
 using MyCovenantPath1.Data;
 using System.ComponentModel.DataAnnotations;
 
-namespace BowlingLeague.Data
+namespace MyCovenantPath1.Data
 {
     public class CovenantPathDbContext : DbContext
     {

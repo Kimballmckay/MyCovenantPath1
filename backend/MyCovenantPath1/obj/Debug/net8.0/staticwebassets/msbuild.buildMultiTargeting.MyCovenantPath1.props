@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MyCovenantPath1.props" />
+</Project>
