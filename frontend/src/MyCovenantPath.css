@@ -1,0 +1,193 @@
+/* Main Container */
+.main-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status Bar */
+.status-bar {
+  padding-top: 5px;
+  min-height: 52px;
+  background-color: white;
+}
+
+.status-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-time {
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 590;
+}
+
+.status-icons {
+  width: 124px;
+  height: 10px;
+}
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px;
+}
+
+.profile-picture {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.username-box,
+.snapshot-box {
+  padding: 8px;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+.progress-container {
+  border: 1px solid black;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-percentage {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.progress-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+  background: conic-gradient(black 0% 47%, transparent 47% 100%);
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Jump Back Section */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.carousel-item {
+  flex: 0 0 calc(66.67% - 10px); /* 1 and 1/2 items per view */
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-article-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.carousel-article-description {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.carousel-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dots container */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Individual dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Active dot (highlighted) */
+.dot.active {
+  background-color: black;
+}
+
+/* Bottom Navigation */
+.bottom-navigation {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #e0e0e0;
+}
