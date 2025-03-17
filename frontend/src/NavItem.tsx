@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./GoalsPlans.module.css";
+import styles from "./assets/styles/styles.module.css";
 
 interface NavItemProps {
   label: string;
