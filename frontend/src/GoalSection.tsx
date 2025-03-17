@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./assets/styles/styles.module.css";
+import styles from "./assets/styles/goalsplans.module.css";
 
 interface GoalSectionProps {
   title: string;
@@ -12,17 +12,6 @@ const GoalSection: React.FC<GoalSectionProps> = ({
   goals,
   variant = "daily",
 }) => {
-  const getContainerStyles = () => {
-    switch (variant) {
-      case "monthly":
-        return styles.monthlyGoalsContainer;
-      case "yearly":
-        return styles.yearlyGoalsContainer;
-      default:
-        return "";
-    }
-  };
-
   const getSectionStyles = () => {
     switch (variant) {
       case "monthly":
@@ -56,79 +45,30 @@ const GoalSection: React.FC<GoalSectionProps> = ({
     }
   };
 
-  const renderEditButton = () => {
-    switch (variant) {
-      case "monthly":
-        return (
-          <button
-            className={styles.monthlyEditButton}
-            aria-label={`Edit ${title}`}
-          >
-            <div className={styles.stateLayer}>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/eaf75a784b718d28ed2933d5ad450246e42bdf6ddce1c66851dfbc0c5722782c?placeholderIfAbsent=true&apiKey=3c1836ca9e544bbe8603c758fecc6a89"
-                alt="Edit"
-                className={styles.editIcon}
-              />
-            </div>
-          </button>
-        );
-      case "yearly":
-        return (
-          <button
-            className={styles.yearlyEditButton}
-            aria-label={`Edit ${title}`}
-          >
-            <div className={styles.yearlyEditButtonContainer}>
-              <div className={styles.stateLayer}>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/eaf75a784b718d28ed2933d5ad450246e42bdf6ddce1c66851dfbc0c5722782c?placeholderIfAbsent=true&apiKey=3c1836ca9e544bbe8603c758fecc6a89"
-                  alt="Edit"
-                  className={styles.editIcon}
-                />
-              </div>
-            </div>
-          </button>
-        );
-      default:
-        return (
-          <button className={styles.editButton} aria-label={`Edit ${title}`}>
-            <div className={styles.editButtonContainer}>
-              <div className={styles.stateLayer}>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/eaf75a784b718d28ed2933d5ad450246e42bdf6ddce1c66851dfbc0c5722782c?placeholderIfAbsent=true&apiKey=3c1836ca9e544bbe8603c758fecc6a89"
-                  alt="Edit"
-                  className={styles.editIcon}
-                />
-              </div>
-            </div>
-          </button>
-        );
-    }
-  };
-
-  const containerClass = getContainerStyles();
-  const Wrapper = containerClass ? "section" : React.Fragment;
-
   return (
-    <Wrapper {...(containerClass ? { className: containerClass } : {})}>
-      <article className={getSectionStyles()}>
-        <div className={getContentStyles()}>
-          <div className={getTextContentStyles()}>
-            <h2 className={styles.goalHeading}>{title}</h2>
-            <p className={styles.goalText}>
-              {goals.map((goal, index) => (
-                <React.Fragment key={index}>
-                  {goal}
-                  {index < goals.length - 1 && <br />}
-                </React.Fragment>
-              ))}
-            </p>
-          </div>
+    <article className={getSectionStyles()}>
+      <div className={getContentStyles()}>
+        <div className={getTextContentStyles()}>
+          <h2 className={styles.goalHeading}>{title}</h2>
+          <p className={styles.goalText}>
+            {goals.map((goal, index) => (
+              <React.Fragment key={index}>
+                {goal}
+                {index < goals.length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </p>
         </div>
-      </article>
-      {renderEditButton()}
-    </Wrapper>
+      </div>
+      <button
+        className={styles.editButton}
+        aria-label={`Edit ${title}`}
+      >
+        <div className={styles.stateLayer}>
+          <span className={styles.editIcon}>+</span>
+        </div>
+      </button>
+    </article>
   );
 };
 
