@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 const TempleDate = ({ date, imageSrc }: { date: string; imageSrc: string }) => {
   return (

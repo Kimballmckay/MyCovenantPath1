@@ -24,9 +24,14 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: white;
+  color: black(255, 255, 255, 0.87);
+  display: flex; /* Use flex to center content if desired */
+  justify-content: center; /* Centers horizontally */
+  align-items: flex-start; /* Adjust as needed, could use 'center' too */
   min-height: 100vh;
 }
 
