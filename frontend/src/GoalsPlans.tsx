@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "./GoalsPlans.module.css";
+import styles from "./assets/styles/styles.module.css";
 import StatusBar from "./StatusBar";
 import Header from "./Header";
 import GoalSection from "./GoalSection";
