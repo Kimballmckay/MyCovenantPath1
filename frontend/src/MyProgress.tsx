@@ -1,6 +1,6 @@
 // MyProgress.tsx
 'use client';
-import React, { useState } from "react";
+import  { useState } from "react";
 import MobileLayout from "@/components/mobile/MobileLayout"; // Mobile layout
 import StatusBar from "@/components/mobile/StatusBar"; // Status bar
 import Header from "@/components/mobile/Header"; // Header component
