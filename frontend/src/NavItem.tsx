@@ -1,40 +1,32 @@
-import React from "react";
-import styles from "./GoalsPlans.module.css";
+import React from 'react';
+import styles from './Menu.module.css';
 
 interface NavItemProps {
-  label: string;
   iconSrc: string;
-  isActive?: boolean;
-  onClick?: () => void;
+  label: string;
+  isActive: boolean;
+  containerClassName: string;
+  stateLayerClassName: string;
+  navItemClassName: string;
 }
 
 const NavItem: React.FC<NavItemProps> = ({
-  label,
   iconSrc,
-  isActive = false,
-  onClick,
+  label,
+  isActive,
+  containerClassName,
+  stateLayerClassName,
+  navItemClassName,
 }) => {
   return (
-    <button className={styles.navItem} onClick={onClick}>
-      <div
-        className={
-          isActive ? styles.navIconContainer : styles.navIconContainer2
-        }
-      >
-        <div
-          className={
-            isActive
-              ? styles.navStateLayer3
-              : isActive === false
-                ? styles.navStateLayer2
-                : styles.navStateLayer
-          }
-        >
-          <img src={iconSrc} alt={label} className={styles.navIcon} />
+    <div className={navItemClassName}>
+      <div className={containerClassName}>
+        <div className={stateLayerClassName}>
+          <img src={iconSrc} className={styles.img5} alt={`${label} icon`} />
         </div>
       </div>
-      <span className={styles.navLabel}>{label}</span>
-    </button>
+      <div className={styles.labelText}>{label}</div>
+    </div>
   );
 };
 
