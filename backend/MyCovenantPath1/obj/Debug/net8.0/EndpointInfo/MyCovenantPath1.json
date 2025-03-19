@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MyCovenantPath1",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Church_Attendance": {
+      "get": {
+        "tags": [
+          "Church_Attendance"
+        ],
+        "operationId": "GetChurch_Attendance",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Goal": {
+      "get": {
+        "tags": [
+          "Goal"
+        ],
+        "operationId": "GetGoal",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Lesson": {
+      "get": {
+        "tags": [
+          "Lesson"
+        ],
+        "operationId": "GetLessons",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/LessonTaught": {
+      "get": {
+        "tags": [
+          "LessonTaught"
+        ],
+        "operationId": "GetLessonTaught",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Study": {
+      "get": {
+        "tags": [
+          "Study"
+        ],
+        "operationId": "GetStudies",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Temple_Attendance": {
+      "get": {
+        "tags": [
+          "Temple_Attendance"
+        ],
+        "operationId": "GetTemple_Attendance",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "GetUser",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
