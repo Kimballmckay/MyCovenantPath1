@@ -50,7 +50,6 @@ const MyCovenantPath: React.FC = () => {
         <TitleSection />
         <ProfileSection />
         <JumpBackInSection />
-        <BottomNavigation />
       </div>
     </main>
   );
@@ -83,6 +82,9 @@ const ProfileSection: React.FC = () => {
         className="profile-picture"
         alt="Profile picture"
       />
+      <br />
+      <br />
+      <br />
       <div className="profile-info">
         <div className="username-box">spencerhilton</div>
         <div className="snapshot-box">Progress Snapshot</div>
@@ -171,10 +173,6 @@ const JumpBackInSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
-const BottomNavigation: React.FC = () => {
-  return <nav className="bottom-navigation">{/* Navigation items here */}</nav>;
 };
 
 export default MyCovenantPath;
