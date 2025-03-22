@@ -1,44 +1,90 @@
-import React from 'react';
+interface TopicProps {
+  title: string;
+  progress: number; // 0-100
+}
 
-const TopicItem = ({ title }: { title: string }) => {
+const TopicItem = ({ title, progress }: TopicProps) => {
   return (
-    <>
-      <h3 className="self-start text-base leading-none text-center text-black">
+    <div style={{ marginBottom: '20px' }}>
+      <h3
+        style={{
+          fontSize: '16px',
+          marginBottom: '8px',
+          fontWeight: 'normal',
+        }}
+      >
         {title}
       </h3>
-      <div className="flex flex-col items-start self-end mt-7 max-w-full bg-zinc-500 bg-opacity-20 w-[258px]">
-        <div className="flex shrink-0 w-1 h-1 bg-blue-600 rounded-[100px]" />
+
+      {/* Container */}
+      <div
+        style={{
+          width: '100%',
+          height: '16px',
+          backgroundColor: '#e2e8f0',
+          borderRadius: '8px',
+          overflow: 'hidden',
+          border: '1px solid #cbd5e1',
+        }}
+      >
+        {/* Actual progress bar */}
+        <div
+          style={{
+            width: `${progress}%`,
+            height: '100%',
+            backgroundColor: '#3b82f6',
+            borderRadius: '8px',
+          }}
+        />
       </div>
-    </>
+    </div>
   );
 };
 
 const TopicsStudied = () => {
+  const topics = [
+    { title: 'The Restoration', progress: 75 },
+    { title: 'The Plan of Salvation', progress: 45 },
+    { title: 'The Gospel of Jesus Christ', progress: 60 },
+    { title: 'Becoming Lifelong Disciples of Jesus Christ', progress: 30 },
+  ];
+
   return (
-    <section className="w-full mt-8">
-      <h2 className="ml-6 text-base leading-none text-center text-black">
+    <div
+      style={{
+        width: '100%',
+        maxWidth: '400px',
+        margin: '32px auto 0',
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '18px',
+          textAlign: 'center',
+          marginBottom: '16px',
+        }}
+      >
         Topics Studied
       </h2>
-      <div className="flex flex-col self-center pt-2.5 pr-8 pb-12 pl-2.5 mt-4 w-full rounded-md border border-black border-solid bg-slate-400 bg-opacity-20 max-w-[324px]">
-        <TopicItem title="The Restoration" />
 
-        <TopicItem title="The Plan of Salvation" />
-
-        <h3 className="self-start mt-3.5 text-base leading-none text-center text-black">
-          The Gospel of Jesus Christ
-        </h3>
-        <div className="flex flex-col items-start self-end mt-7 max-w-full bg-zinc-500 bg-opacity-20 w-[258px]">
-          <div className="flex shrink-0 w-1 h-1 bg-blue-600 rounded-[100px]" />
-        </div>
-
-        <h3 className="mt-3.5 text-base leading-6 text-center text-black w-[248px]">
-          Becoming Lifelong Disciples of Jesus Christ
-        </h3>
-        <div className="flex flex-col items-start self-end mt-6 max-w-full bg-zinc-500 bg-opacity-20 w-[258px]">
-          <div className="flex shrink-0 w-1 h-1 bg-blue-600 rounded-[100px]" />
-        </div>
+      <div
+        style={{
+          padding: '24px',
+          backgroundColor: 'rgba(148, 163, 184, 0.2)',
+          borderRadius: '8px',
+          border: '2px solid #000000',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        {topics.map((topic, index) => (
+          <TopicItem
+            key={index}
+            title={topic.title}
+            progress={topic.progress}
+          />
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
