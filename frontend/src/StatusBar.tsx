@@ -2,10 +2,20 @@ import React from 'react';
 import styles from './Menu.module.css';
 
 const StatusBar: React.FC = () => {
+   // Get current time in HH:MM format
+    const getTime = () => {
+      const now = new Date();
+      return now.toLocaleTimeString('en-US', { 
+          hour: '2-digit', 
+          minute: '2-digit',
+          hour12: true 
+      });
+  };
+
   return (
     <header className={styles.statusBarIPhone}>
       <div className={styles.frame}>
-        <time className={styles.time}>9:41</time>
+        <time className={styles.time}>{getTime()}</time>
         <div className={styles.dynamicIslandspacer} />
         <div className={styles.levels}>
           <img

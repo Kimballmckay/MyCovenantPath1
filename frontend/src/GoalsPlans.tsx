@@ -2,6 +2,10 @@
 import React from 'react';
 import styles from './assets/styles/goalsplans.module.css';
 import GoalSection from './GoalSection';
+import StatusBar from "./StatusBar";
+import NavigationBar from "./NavigationBar";
+import MenuHeader from './MenuHeader';
+
 
 const GoalsPlans: React.FC = () => {
   const dailyGoals = [
@@ -35,6 +39,9 @@ const GoalsPlans: React.FC = () => {
   return (
     <main className={styles.goalsPlans}>
       <div className={styles.goalsPlans2}>
+      <StatusBar />
+      <MenuHeader />
+      
         {/* Goal Sections */}
         <GoalSection title="Daily Goals" goals={dailyGoals} variant="daily" />
         <GoalSection
@@ -63,6 +70,7 @@ const GoalsPlans: React.FC = () => {
             Learn about Goal Setting and Planning
           </span>
         </div>
+        <NavigationBar />
       </div>
     </main>
   );
