@@ -1,29 +1,78 @@
-import React from "react";
+import { useState } from 'react';
 
 const ChurchAttendance = () => {
+  // Get current month's Sundays
+  const getCurrentMonthSundays = (): Date[] => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+
+    const sundaysArray: Date[] = [];
+
+    // Find all Sundays
+    let currentDay = new Date(firstDay);
+    while (currentDay <= lastDay) {
+      if (currentDay.getDay() === 0) {
+        // 0 = Sunday
+        sundaysArray.push(new Date(currentDay));
+      }
+      currentDay.setDate(currentDay.getDate() + 1);
+    }
+
+    return sundaysArray;
+  };
+
+  const monthSundays = getCurrentMonthSundays();
+  const [attendanceState, setAttendanceState] = useState<boolean[]>(
+    Array(monthSundays.length).fill(false)
+  );
+
+  // Handler to toggle attendance
+  const handleToggleAttendance = (sundayIndex: number): void => {
+    const updatedAttendance = [...attendanceState];
+    updatedAttendance[sundayIndex] = !updatedAttendance[sundayIndex];
+    setAttendanceState(updatedAttendance);
+  };
+
+  // Format date as "month/day" (e.g., "3/22")
+  const formatDateMonthDay = (date: Date): string => {
+    const month = date.getMonth() + 1; // getMonth() is zero-based
+    const day = date.getDate();
+    return `${month}/${day}`;
+  };
+
   return (
     <section className="w-full mt-7">
-      <h2 className="ml-5 text-base leading-none text-center text-black">
+      <h2 className="text-lg font-semibold text-center text-black mb-3">
         Church Attendance this Month
       </h2>
-      <div className="flex gap-1.5 mt-5 ml-4">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bd720f2-766b-4f32-9cfa-f73698c3a5be?placeholderIfAbsent=true&apiKey=f9d1cc47ea5440408c735bea3934bb2e"
-          className="object-contain shrink-0 w-12 h-12 bg-green-800 rounded-full aspect-[0.98]"
-          alt="Church attendance marker"
-        />
-        <div className="flex shrink-0 self-start rounded-full border border-black border-solid h-[47px] w-[47px]" />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/784c8b70-eed1-4703-b81c-919a69bebb8c?placeholderIfAbsent=true&apiKey=f9d1cc47ea5440408c735bea3934bb2e"
-          className="object-contain shrink-0 w-12 h-12 bg-green-800 rounded-full aspect-square"
-          alt="Church attendance marker"
-        />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b79c5395-c330-474f-880c-a026cd3c5d0f?placeholderIfAbsent=true&apiKey=f9d1cc47ea5440408c735bea3934bb2e"
-          className="object-contain shrink-0 w-12 h-12 bg-green-800 rounded-full aspect-[0.98]"
-          alt="Church attendance marker"
-        />
-        <div className="flex shrink-0 self-start rounded-full border border-black border-solid h-[47px] w-[47px]" />
+
+      <div className="flex flex-wrap justify-center gap-4 mt-3">
+        {monthSundays.map((sunday, sundayIndex) => (
+          <div
+            key={sundayIndex}
+            className={`w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 ${
+              attendanceState[sundayIndex]
+                ? 'bg-green-600'
+                : 'border-2 border-gray-400'
+            }`}
+            onClick={() => handleToggleAttendance(sundayIndex)}
+          >
+            {attendanceState[sundayIndex] ? (
+              <span className="text-white text-lg">✓</span>
+            ) : (
+              <span className="text-sm text-gray-500">
+                {formatDateMonthDay(sunday)}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center mt-4 text-sm text-gray-600">
+        <p>Click a circle to mark your attendance</p>
       </div>
     </section>
   );
