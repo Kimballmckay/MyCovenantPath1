@@ -1,30 +1,107 @@
-import React from "react";
+import { useState } from 'react';
 
 const ChurchAttendance = () => {
+  const getCurrentMonthSundays = (): Date[] => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+
+    const sundaysArray: Date[] = [];
+
+    let currentDay = new Date(firstDay);
+    while (currentDay <= lastDay) {
+      if (currentDay.getDay() === 0) {
+        sundaysArray.push(new Date(currentDay));
+      }
+      currentDay.setDate(currentDay.getDate() + 1);
+    }
+
+    return sundaysArray;
+  };
+
+  const monthSundays = getCurrentMonthSundays();
+  const [attendanceState, setAttendanceState] = useState<boolean[]>(
+    Array(monthSundays.length).fill(false)
+  );
+
+  const handleToggleAttendance = (sundayIndex: number): void => {
+    const updatedAttendance = [...attendanceState];
+    updatedAttendance[sundayIndex] = !updatedAttendance[sundayIndex];
+    setAttendanceState(updatedAttendance);
+  };
+
+  const formatDateMonthDay = (date: Date): string => {
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${month}/${day}`;
+  };
+
   return (
     <section className="w-full mt-7">
-      <h2 className="ml-5 text-base leading-none text-center text-black">
+      <h2 className="text-lg font-semibold text-center text-black mb-3">
         Church Attendance this Month
       </h2>
-      <div className="flex gap-1.5 mt-5 ml-4">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bd720f2-766b-4f32-9cfa-f73698c3a5be?placeholderIfAbsent=true&apiKey=f9d1cc47ea5440408c735bea3934bb2e"
-          className="object-contain shrink-0 w-12 h-12 bg-green-800 rounded-full aspect-[0.98]"
-          alt="Church attendance marker"
-        />
-        <div className="flex shrink-0 self-start rounded-full border border-black border-solid h-[47px] w-[47px]" />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/784c8b70-eed1-4703-b81c-919a69bebb8c?placeholderIfAbsent=true&apiKey=f9d1cc47ea5440408c735bea3934bb2e"
-          className="object-contain shrink-0 w-12 h-12 bg-green-800 rounded-full aspect-square"
-          alt="Church attendance marker"
-        />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b79c5395-c330-474f-880c-a026cd3c5d0f?placeholderIfAbsent=true&apiKey=f9d1cc47ea5440408c735bea3934bb2e"
-          className="object-contain shrink-0 w-12 h-12 bg-green-800 rounded-full aspect-[0.98]"
-          alt="Church attendance marker"
-        />
-        <div className="flex shrink-0 self-start rounded-full border border-black border-solid h-[47px] w-[47px]" />
+
+      <div className="attendance-container">
+        {monthSundays.map((sunday, sundayIndex) => (
+          <div
+            key={sundayIndex}
+            className={`attendance-circle ${
+              attendanceState[sundayIndex] ? 'checked' : ''
+            }`}
+            onClick={() => handleToggleAttendance(sundayIndex)}
+          >
+            {attendanceState[sundayIndex] ? '✓' : formatDateMonthDay(sunday)}
+          </div>
+        ))}
       </div>
+
+      <div className="text-center mt-4 text-sm text-gray-600">
+        <p>Click a circle to mark your attendance</p>
+      </div>
+
+      <style jsx>{`
+        .attendance-container {
+          display: flex;
+          flex-wrap: nowrap; /* Ensure they stay in a row */
+          gap: 10px;
+          overflow-x: auto; /* Allow scrolling if needed */
+          padding: 10px;
+          justify-content: flex-start; /* Align to the left */
+        }
+
+        .attendance-circle {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition:
+            background 0.3s,
+            color 0.3s,
+            transform 0.2s;
+          font-size: 14px;
+          font-weight: bold;
+          border: 2px solid #999;
+          color: #555;
+          user-select: none;
+        }
+
+        .attendance-circle.checked {
+          background-color: #16a34a;
+          color: white;
+          border: none;
+          transform: scale(1.1);
+        }
+
+        .attendance-circle:hover {
+          transform: scale(1.05);
+        }
+      `}</style>
     </section>
   );
 };
