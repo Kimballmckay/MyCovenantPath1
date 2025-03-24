@@ -1,30 +1,27 @@
-import React from "react";
-import styles from "./assets/styles/styles.module.css";
+'use client';
+import * as React from 'react';
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   return (
-    <section className={styles.headerContainer}>
-      <div className={styles.headerContent}>
-        <button className={styles.backButton} aria-label="Go back">
-          <div className={styles.buttonContainer}>
-            <div className={styles.stateLayer}>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b88e52832bdf5fa7ada12911336e0d4d27f10cdb04410ced563f8049909a6cf8?placeholderIfAbsent=true&apiKey=3c1836ca9e544bbe8603c758fecc6a89"
-                alt="Back"
-                className={styles.buttonIcon}
-              />
-            </div>
-          </div>
-        </button>
-        <h1 className={styles.pageTitle}>Goals & Plans</h1>
+    <header className="flex flex-row items-center justify-between w-full mb-4">
+      {/* Left: Back button */}
+      <button className="flex justify-center items-center w-10 h-10 bg-blue-950 rounded-full">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/a4f03672771789bb5d02f38504797c30eb4201547796412b50e380a8c4985e45?placeholderIfAbsent=true&apiKey=3c1836ca9e544bbe8603c758fecc6a89"
-          alt="Profile"
-          className={styles.profileImage}
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/88756fb064047a3fac6fb22078fe57c50497d4e6?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
+          className="w-6 h-6"
+          alt="Back"
         />
-      </div>
-    </section>
+      </button>
+      
+      {/* Center: Title */}
+      <h1 className="text-3xl font-semibold text-black">My Studies</h1>
+      
+      {/* Right: Profile picture */}
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/a63c3342c968299445bea749b1d9ea8963e2a823?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
+        className="w-10 h-10 rounded-full object-cover"
+        alt="Profile"
+      />
+    </header>
   );
 };
-
-export default Header;
