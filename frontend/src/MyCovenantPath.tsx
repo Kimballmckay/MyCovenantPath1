@@ -1,44 +1,48 @@
-"use client";
-import "./MyCovenantPath.css";
-import React, { useState, useEffect, useRef } from "react";
+'use client';
+import './MyCovenantPath.css';
+import React, { useState, useEffect, useRef } from 'react';
+import styles from './assets/styles/goalsplans.module.css';
+import StatusBar from './components/StatusBar.tsx';
+import MenuHeader from './components/RealHeader.tsx';
+import NavigationBar from './components/NavigationBar.tsx';
 
 const articles = [
   {
-    title: "Jesus Christ is Your Savior",
+    title: 'Jesus Christ is Your Savior',
     image:
-      "https://www.churchofjesuschrist.org/imgs/664729d1d9668cf90d62a0871bcf8f3df9bc0e10/full/!1280%2C853/0/default",
-    description: "Discover ways to deepen your spiritual connection.",
-    link: "https://www.churchofjesuschrist.org/welcome/savior-jesus-christ?lang=eng",
+      'https://www.churchofjesuschrist.org/imgs/664729d1d9668cf90d62a0871bcf8f3df9bc0e10/full/!1280%2C853/0/default',
+    description: 'Discover ways to deepen your spiritual connection.',
+    link: 'https://www.churchofjesuschrist.org/welcome/savior-jesus-christ?lang=eng',
   },
   {
-    title: "Jesus Christ Understands Your Challenges",
+    title: 'Jesus Christ Understands Your Challenges',
     image:
-      "https://www.churchofjesuschrist.org/imgs/320afb48d89d174e0dfa532d413dcc3297e32378/full/!1280%2C720/0/default",
+      'https://www.churchofjesuschrist.org/imgs/320afb48d89d174e0dfa532d413dcc3297e32378/full/!1280%2C720/0/default',
     description:
-      "No one has to go through life’s challenges alone. Jesus Christ understands perfectly what you’re going through and will support you.",
-    link: "https://www.churchofjesuschrist.org/welcome/jesus-knows-you?lang=eng",
+      'No one has to go through life’s challenges alone. Jesus Christ understands perfectly what you’re going through and will support you.',
+    link: 'https://www.churchofjesuschrist.org/welcome/jesus-knows-you?lang=eng',
   },
   {
-    title: "The Making of a Missionary",
+    title: 'The Making of a Missionary',
     image:
-      "https://www.churchofjesuschrist.org/imgs/https%3A%2F%2Fwww.churchofjesuschrist.org%2Fimgs%2Fa9a641feaa37f659f83f62443e5e5d58e92806f0%2Ffull%2F%2521768%252C%2F0%2Fdefault/full/!640,/0/default",
-    description: "How serving others can strengthen your covenant path.",
-    link: "https://www.churchofjesuschrist.org/study/general-conference/1976/10/the-making-of-a-missionary?lang=eng#title1",
+      'https://www.churchofjesuschrist.org/imgs/https%3A%2F%2Fwww.churchofjesuschrist.org%2Fimgs%2Fa9a641feaa37f659f83f62443e5e5d58e92806f0%2Ffull%2F%2521768%252C%2F0%2Fdefault/full/!640,/0/default',
+    description: 'How serving others can strengthen your covenant path.',
+    link: 'https://www.churchofjesuschrist.org/study/general-conference/1976/10/the-making-of-a-missionary?lang=eng#title1',
   },
   {
-    title: "Serve a Mission",
+    title: 'Serve a Mission',
     image:
-      "https://www.churchofjesuschrist.org/imgs/e852b6f3ec0111ec802aeeeeac1efd1f9fa4cb6e/full/!1920%2C800/0/default",
-    description: "Have you ever thought about serving a mission?",
-    link: "https://www.churchofjesuschrist.org/callings/missionary?lang=eng",
+      'https://www.churchofjesuschrist.org/imgs/e852b6f3ec0111ec802aeeeeac1efd1f9fa4cb6e/full/!1920%2C800/0/default',
+    description: 'Have you ever thought about serving a mission?',
+    link: 'https://www.churchofjesuschrist.org/callings/missionary?lang=eng',
   },
   {
-    title: "How Can I Be a Successful Missionary?",
+    title: 'How Can I Be a Successful Missionary?',
     image:
-      "https://www.churchofjesuschrist.org/imgs/36902a7211c7b3f03c788cbad23573be28a2f402/full/!1280%2C666/0/default",
+      'https://www.churchofjesuschrist.org/imgs/36902a7211c7b3f03c788cbad23573be28a2f402/full/!1280%2C666/0/default',
     description:
-      "No matter how hard my companion and I worked, everyone was rejecting our message. What could we do to become successful missionaries?",
-    link: "https://www.churchofjesuschrist.org/study/ensign/2013/10/how-can-i-be-a-successful-missionary?lang=eng#title1",
+      'No matter how hard my companion and I worked, everyone was rejecting our message. What could we do to become successful missionaries?',
+    link: 'https://www.churchofjesuschrist.org/study/ensign/2013/10/how-can-i-be-a-successful-missionary?lang=eng#title1',
   },
 ];
 
@@ -47,21 +51,13 @@ const MyCovenantPath: React.FC = () => {
     <main className="main-container">
       <div className="content-wrapper">
         <StatusBar />
+        <MenuHeader />
         <TitleSection />
         <ProfileSection />
         <JumpBackInSection />
+        <NavigationBar />
       </div>
     </main>
-  );
-};
-
-const StatusBar: React.FC = () => {
-  return (
-    <header className="status-bar">
-      <div className="status-content">
-        <div className="status-icons" />
-      </div>
-    </header>
   );
 };
 
@@ -90,7 +86,7 @@ const ProfileSection: React.FC = () => {
         <div className="progress-container">
           <span className="progress-percentage">47%</span>
           <div className="progress-circle">
-            <div className="progress-fill" style={{ width: "47%" }}></div>
+            <div className="progress-fill" style={{ width: '47%' }}></div>
           </div>
         </div>
       </div>
@@ -114,12 +110,12 @@ const JumpBackInSection: React.FC = () => {
     };
 
     if (carouselRef.current) {
-      carouselRef.current.addEventListener("scroll", handleScroll);
+      carouselRef.current.addEventListener('scroll', handleScroll);
     }
 
     return () => {
       if (carouselRef.current) {
-        carouselRef.current.removeEventListener("scroll", handleScroll);
+        carouselRef.current.removeEventListener('scroll', handleScroll);
       }
     };
   }, []);
@@ -153,7 +149,7 @@ const JumpBackInSection: React.FC = () => {
         {articles.map((_, index) => (
           <span
             key={index}
-            className={`dot ${activeIndex === index ? "active" : ""}`}
+            className={`dot ${activeIndex === index ? 'active' : ''}`}
             onClick={() => {
               if (carouselRef.current) {
                 const element = carouselRef.current.children[
@@ -162,7 +158,7 @@ const JumpBackInSection: React.FC = () => {
                 const scrollTo = element.offsetLeft;
                 carouselRef.current.scrollTo({
                   left: scrollTo,
-                  behavior: "smooth",
+                  behavior: 'smooth',
                 });
                 setActiveIndex(index);
               }

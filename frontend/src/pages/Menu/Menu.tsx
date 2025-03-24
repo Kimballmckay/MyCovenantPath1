@@ -1,10 +1,8 @@
-'use client';
-import * as React from 'react';
 import styles from './Menu.module.css';
-import StatusBar from './StatusBar';
-import MenuHeader from './MenuHeader';
-import MenuButton from './MenuButton';
-import NavigationBar from './NavigationBar';
+import StatusBar from '../../components/StatusBar.tsx';
+import MenuHeader from '../../components/RealHeader.tsx';
+import MenuButton from './MenuButton.tsx';
+import NavigationBar from '../../components/NavigationBar.tsx';
 
 function Menu() {
   return (
