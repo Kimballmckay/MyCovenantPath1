@@ -1,56 +1,31 @@
-import React from 'react';
-import styles from './Menu.module.css';
-import NavItem from './NavItem';
+'use client';
+import * as React from 'react';
+import { NavItem } from './NavItem';
 
-const NavigationBar: React.FC = () => {
+export const NavigationBar: React.FC = () => {
   return (
-    <nav className={styles.navigationbar}>
+    <nav className="flex gap-2 items-start px-2 mt-16 bg-slate-500">
       <NavItem
-        iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/f002116ce522b638b43e5c4de34987635921589a9f2f7354c19c3f5cb74b3213?placeholderIfAbsent=true&apiKey=3fb7e4d952c749b1b4b816af6fe83375"
+        icon="https://cdn.builder.io/api/v1/image/assets/TEMP/5765cd6a518589313001d3c74a93674515c99df5?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
         label="Path"
-        isActive={false}
-        containerClassName={styles.iconContainer}
-        stateLayerClassName={styles.stateLayer2}
-        navItemClassName={styles.navitem1}
       />
-
       <NavItem
-        iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/31a01464f0168d2b4386f2d59a9cbc9088c82a9478cfc73c03c7a67346192708?placeholderIfAbsent=true&apiKey=3fb7e4d952c749b1b4b816af6fe83375"
+        icon="https://cdn.builder.io/api/v1/image/assets/TEMP/27fecfbdfa711f110dc97b16f2e6e2e349f0d446?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
         label="Progress"
-        isActive={false}
-        containerClassName={styles.iconContainer2}
-        stateLayerClassName={styles.stateLayer3}
-        navItemClassName={styles.navitem2}
       />
-
       <NavItem
-        iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/15be6936d5ee80b6bf0828801aa326bf800c811d4d6ba3964e4da1c631b42a66?placeholderIfAbsent=true&apiKey=3fb7e4d952c749b1b4b816af6fe83375"
+        icon="https://cdn.builder.io/api/v1/image/assets/TEMP/b2e2391ba8b39b346c0c9b7fff7fbeef3209040a?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
         label="Goals"
-        isActive={false}
-        containerClassName={styles.iconContainer3}
-        stateLayerClassName={styles.stateLayer4}
-        navItemClassName={styles.navitem3}
       />
-
       <NavItem
-        iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/de0f9ae439c533ad2971037b1890b21f02ee41efd4e42b9ab284a7e639e9ebca?placeholderIfAbsent=true&apiKey=3fb7e4d952c749b1b4b816af6fe83375"
+        icon="https://cdn.builder.io/api/v1/image/assets/TEMP/56c22d7b8b41bde161b62bbb4968430ef65f06ea?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
         label="Study"
-        isActive={false}
-        containerClassName={styles.iconContainer4}
-        stateLayerClassName={styles.stateLayer5}
-        navItemClassName={styles.navitem4}
-      />
-
-      <NavItem
-        iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ab7785cb9536970a94b2768a2045a46835b65ad2ed50994533fabf488462b39c?placeholderIfAbsent=true&apiKey=3fb7e4d952c749b1b4b816af6fe83375"
-        label="Menu"
         isActive={true}
-        containerClassName={styles.iconContainer5}
-        stateLayerClassName={styles.stateLayer6}
-        navItemClassName={styles.navitem5}
+      />
+      <NavItem
+        icon="https://cdn.builder.io/api/v1/image/assets/TEMP/fa4b0f3c32bab4b87170149256088ed71bf9383f?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
+        label="Menu"
       />
     </nav>
   );
 };
-
-export default NavigationBar;
