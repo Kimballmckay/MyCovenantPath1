@@ -1,10 +1,11 @@
 import './App.css';
-import GoalsPlans from './GoalsPlans';
+import MyStudies from './MyStudies';
 
 function App() {
   return (
     <>
-      <GoalsPlans />
+      <MyStudies />
+
     </>
   );
 }
