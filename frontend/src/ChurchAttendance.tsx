@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 const ChurchAttendance = () => {
-  // Get current month's Sundays
   const getCurrentMonthSundays = (): Date[] => {
     const now = new Date();
     const year = now.getFullYear();
@@ -11,11 +10,9 @@ const ChurchAttendance = () => {
 
     const sundaysArray: Date[] = [];
 
-    // Find all Sundays
     let currentDay = new Date(firstDay);
     while (currentDay <= lastDay) {
       if (currentDay.getDay() === 0) {
-        // 0 = Sunday
         sundaysArray.push(new Date(currentDay));
       }
       currentDay.setDate(currentDay.getDate() + 1);
@@ -29,16 +26,14 @@ const ChurchAttendance = () => {
     Array(monthSundays.length).fill(false)
   );
 
-  // Handler to toggle attendance
   const handleToggleAttendance = (sundayIndex: number): void => {
     const updatedAttendance = [...attendanceState];
     updatedAttendance[sundayIndex] = !updatedAttendance[sundayIndex];
     setAttendanceState(updatedAttendance);
   };
 
-  // Format date as "month/day" (e.g., "3/22")
   const formatDateMonthDay = (date: Date): string => {
-    const month = date.getMonth() + 1; // getMonth() is zero-based
+    const month = date.getMonth() + 1;
     const day = date.getDate();
     return `${month}/${day}`;
   };
@@ -49,24 +44,16 @@ const ChurchAttendance = () => {
         Church Attendance this Month
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-4 mt-3">
+      <div className="attendance-container">
         {monthSundays.map((sunday, sundayIndex) => (
           <div
             key={sundayIndex}
-            className={`w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 ${
-              attendanceState[sundayIndex]
-                ? 'bg-green-600'
-                : 'border-2 border-gray-400'
+            className={`attendance-circle ${
+              attendanceState[sundayIndex] ? 'checked' : ''
             }`}
             onClick={() => handleToggleAttendance(sundayIndex)}
           >
-            {attendanceState[sundayIndex] ? (
-              <span className="text-white text-lg">✓</span>
-            ) : (
-              <span className="text-sm text-gray-500">
-                {formatDateMonthDay(sunday)}
-              </span>
-            )}
+            {attendanceState[sundayIndex] ? '✓' : formatDateMonthDay(sunday)}
           </div>
         ))}
       </div>
@@ -74,6 +61,47 @@ const ChurchAttendance = () => {
       <div className="text-center mt-4 text-sm text-gray-600">
         <p>Click a circle to mark your attendance</p>
       </div>
+
+      <style jsx>{`
+        .attendance-container {
+          display: flex;
+          flex-wrap: nowrap; /* Ensure they stay in a row */
+          gap: 10px;
+          overflow-x: auto; /* Allow scrolling if needed */
+          padding: 10px;
+          justify-content: flex-start; /* Align to the left */
+        }
+
+        .attendance-circle {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition:
+            background 0.3s,
+            color 0.3s,
+            transform 0.2s;
+          font-size: 14px;
+          font-weight: bold;
+          border: 2px solid #999;
+          color: #555;
+          user-select: none;
+        }
+
+        .attendance-circle.checked {
+          background-color: #16a34a;
+          color: white;
+          border: none;
+          transform: scale(1.1);
+        }
+
+        .attendance-circle:hover {
+          transform: scale(1.05);
+        }
+      `}</style>
     </section>
   );
 };
