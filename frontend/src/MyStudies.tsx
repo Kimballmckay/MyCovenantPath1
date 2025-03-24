@@ -1,54 +1,28 @@
 'use client';
 import * as React from 'react';
-import { StatusBar } from './StatusBar';
-import { NavigationBar } from './NavigationBar';
+import styles from './assets/styles/goalsplans.module.css';
+import StatusBar from './components/StatusBar.tsx';
+import MenuHeader from './components/RealHeader.tsx';
+import NavigationBar from './components/NavigationBar.tsx';
 
 const MyStudies: React.FC = () => {
   return (
     <main className="mx-auto w-full max-w-[480px]">
       <div className="overflow-hidden w-full bg-white">
         <StatusBar />
+        <MenuHeader />
         <div className="flex flex-col items-center px-6 mt-8 w-full">
-          {/* FIXING THE HEADER CONTAINER AND ITS CHILDREN */}
-          <div className="w-full mb-8" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-            {/* UPDATED BACK BUTTON TO BE CIRCULAR WITH BLACK COLOR */}
-            <button style={{ 
-              width: '40px', 
-              height: '40px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              backgroundColor: '#000000', // Explicit black color
-              borderRadius: '50%' // Makes it perfectly circular
-            }}>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/88756fb064047a3fac6fb22078fe57c50497d4e6?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
-                style={{ width: '24px', height: '24px' }}
-                alt="Back"
-              />
-            </button>
-            
-            {/* RESTORED ORIGINAL FONT SIZE WITH BLACK COLOR */}
-            <h1 className="text-3xl font-semibold" style={{ color: '#000000' }}>My Studies</h1>
-            
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a63c3342c968299445bea749b1d9ea8963e2a823?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
-              className="rounded-full"
-              style={{ width: '40px', height: '40px', objectFit: 'cover' }}
-              alt="Profile"
-            />
-          </div>
-
+  
           {/* Continue Reading Section with increased spacing */}
           <div className="w-full mb-10">
             {/* Section header */}
-            <div 
-              style={{ 
-                display: 'flex', 
-                flexDirection: 'row', 
-                alignItems: 'center', 
-                marginBottom: '20px' 
-              }} 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginBottom: '20px',
+              }}
               className="flex-row items-center"
             >
               <img
@@ -57,17 +31,19 @@ const MyStudies: React.FC = () => {
                 alt="Continue Reading Icon"
                 style={{ marginRight: '12px' }}
               />
-              <h2 className="text-xl font-medium text-black">Continue Reading</h2>
+              <h2 className="text-xl font-medium text-black">
+                Continue Reading
+              </h2>
             </div>
-            
+
             {/* Articles with increased spacing */}
-            <div 
-              className="flex flex-row w-full" 
-              style={{ 
-                display: 'flex', 
+            <div
+              className="flex flex-row w-full"
+              style={{
+                display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                gap: '16px'
+                gap: '16px',
               }}
             >
               <article className="flex flex-col items-center">
@@ -114,13 +90,13 @@ const MyStudies: React.FC = () => {
           {/* What's Next Section with increased spacing */}
           <div className="w-full mb-10">
             {/* Section header */}
-            <div 
-              style={{ 
-                display: 'flex', 
-                flexDirection: 'row', 
-                alignItems: 'center', 
-                marginBottom: '20px' 
-              }} 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginBottom: '20px',
+              }}
               className="flex-row items-center"
             >
               <img
@@ -131,15 +107,15 @@ const MyStudies: React.FC = () => {
               />
               <h2 className="text-xl font-medium text-black">What's Next</h2>
             </div>
-            
+
             {/* Images with increased spacing */}
-            <div 
-              className="flex flex-row" 
-              style={{ 
-                display: 'flex', 
+            <div
+              className="flex flex-row"
+              style={{
+                display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                gap: '20px'
+                gap: '20px',
               }}
             >
               <img
@@ -158,13 +134,13 @@ const MyStudies: React.FC = () => {
           {/* Additional Resources Section with increased spacing */}
           <div className="w-full mb-10">
             {/* Section header */}
-            <div 
-              style={{ 
-                display: 'flex', 
-                flexDirection: 'row', 
-                alignItems: 'center', 
-                marginBottom: '20px' 
-              }} 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginBottom: '20px',
+              }}
               className="flex-row items-center"
             >
               <img
@@ -173,17 +149,19 @@ const MyStudies: React.FC = () => {
                 alt="Additional Resources Icon"
                 style={{ marginRight: '12px' }}
               />
-              <h2 className="text-xl font-medium text-black">Additional Resources</h2>
+              <h2 className="text-xl font-medium text-black">
+                Additional Resources
+              </h2>
             </div>
-            
+
             {/* Resource images with increased spacing */}
-            <div 
-              className="flex flex-row" 
-              style={{ 
-                display: 'flex', 
+            <div
+              className="flex flex-row"
+              style={{
+                display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                gap: '12px'
+                gap: '12px',
               }}
             >
               <img
