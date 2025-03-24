@@ -59,7 +59,6 @@ const StatusBar: React.FC = () => {
   return (
     <header className="status-bar">
       <div className="status-content">
-        <time className="status-time">9:41</time>
         <div className="status-icons" />
       </div>
     </header>
