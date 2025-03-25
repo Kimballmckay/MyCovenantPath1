@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Menu.module.css';
+import styles from "../pages/Menu/Menu.module.css"; // Adjust the path from `components` to `pages/Menu`
 
 
 const MenuHeader: React.FC = () => {
