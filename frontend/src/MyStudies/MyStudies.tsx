@@ -1,9 +1,9 @@
 'use client';
 import * as React from 'react';
 import styles from './assets/styles/goalsplans.module.css';
-import StatusBar from './components/StatusBar.tsx';
-import MenuHeader from './components/RealHeader.tsx';
-import NavigationBar from './components/NavigationBar.tsx';
+import StatusBar from '../components/StatusBar.tsx';
+import MenuHeader from '../components/RealHeader.tsx';
+import NavigationBar from '../components/NavigationBar.tsx';
 
 const MyStudies: React.FC = () => {
   return (
