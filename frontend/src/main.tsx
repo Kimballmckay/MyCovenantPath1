@@ -5,7 +5,7 @@ import './index.css';
 import MyCovenantPath from './MyCovenantPath.tsx';
 import Menu from './pages/Menu/Menu.tsx';
 import GoalsPlans from './GoalsPlans.tsx';
-import MyProgress from './MyProgress.tsx';
+import MyProgress from './myProgress/MyProgress.tsx';
 import MyStudies from './MyStudies.tsx';
 
 //import MyCovenantPath from "./MyCovenantPath.tsx";

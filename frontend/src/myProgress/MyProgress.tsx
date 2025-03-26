@@ -1,11 +1,9 @@
-'use client';
-import React from 'react';
-import StatusBar from './components/StatusBar';
-import NavigationBar from './components/NavigationBar';
+import StatusBar from '../components/StatusBar';
+import NavigationBar from '../components/NavigationBar';
 import ChurchAttendance from './ChurchAttendance';
 import TopicsStudied from './TopicsStudied';
 import TempleAttendance from './TempleAttendance';
-import MenuHeader from './components/RealHeader';
+import MenuHeader from '../components/RealHeader';
 
 function MyProgress() {
   return (
