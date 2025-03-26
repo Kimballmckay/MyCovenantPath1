@@ -1,146 +1,227 @@
 /* Base styles */
 .goalsPlans {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.goalsPlans2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+/* Goal Sections */
+.goalSection,
+.monthlyGoalSection,
+.yearlyGoalSection {
+  background-color: #a7bfd3;
+  border-radius: 8px;
+  margin: 16px 16px 0;
+  padding: 24px 80px 24px 16px; /* Add right padding to make space for the button */
+  position: relative;
+  text-align: center;
+}
+
+.goalContent,
+.monthlyGoalContent,
+.yearlyGoalContent {
+  width: 100%;
+}
+
+.goalTextContent,
+.monthlyGoalTextContent,
+.yearlyGoalTextContent {
+  padding-right: 0;
+}
+
+.goalHeading {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #000;
+}
+
+.goalText {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+/* Edit Button */
+.editButton,
+.monthlyEditButton,
+.yearlyEditButton {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #1c3654;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure it's above the text */
+}
+
+.stateLayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.editIcon {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 0;
+  margin-top: -2px;
+}
+
+/* Action Button */
+.actionButton {
+  background-color: #1c3654;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 20px 32px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Learning Resource */
+.learningResource {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.resourceIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.resourceText {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+  .goalSection,
+  .monthlyGoalSection,
+  .yearlyGoalSection {
+    margin: 12px 12px 0;
+    padding: 20px 76px 20px 16px;
   }
-  
-  .goalsPlans2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    height: 100%;
-    min-height: 100vh;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 16px 0;
-  }
-  
-  /* Goal Sections */
-  .goalSection, .monthlyGoalSection, .yearlyGoalSection {
-    background-color: #a7bfd3;
-    border-radius: 8px;
-    margin: 16px 16px 0;
-    padding: 24px 80px 24px 16px; /* Add right padding to make space for the button */
-    position: relative;
-    text-align: center;
-  }
-  
-  .goalContent, .monthlyGoalContent, .yearlyGoalContent {
-    width: 100%;
-  }
-  
-  .goalTextContent, .monthlyGoalTextContent, .yearlyGoalTextContent {
-    padding-right: 0;
-  }
-  
-  .goalHeading {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 0 0 16px;
-    color: #000;
-  }
-  
-  .goalText {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0;
-    color: #333;
-  }
-  
-  /* Edit Button */
-  .editButton, .monthlyEditButton, .yearlyEditButton {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: #1c3654;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2; /* Ensure it's above the text */
-  }
-  
-  .stateLayer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .editIcon {
-    color: white;
-    font-size: 32px;
-    font-weight: 300;
-    line-height: 0;
-    margin-top: -2px;
-  }
-  
-  /* Action Button */
+
   .actionButton {
-    background-color: #1c3654;
-    color: white;
-    border: none;
-    border-radius: 40px;
-    padding: 20px 32px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    display: block;
-    margin: 40px auto;
     width: 90%;
-    max-width: 400px;
-    text-align: center;
   }
-  
-  /* Learning Resource */
+
   .learningResource {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    gap: 12px;
-    cursor: pointer;
-    text-decoration: none;
     width: 90%;
-    max-width: 450px;
-    text-align: center;
   }
-  
-  .resourceIcon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .resourceText {
-    font-size: 24px;
-    font-weight: 500;
-    color: #000;
-    text-align: center;
-  }
-  
-  /* Responsive Adjustments */
-  @media screen and (max-width: 480px) {
-    .goalSection, .monthlyGoalSection, .yearlyGoalSection {
-      margin: 12px 12px 0;
-      padding: 20px 76px 20px 16px;
-    }
-    
-    .actionButton {
-      width: 90%;
-    }
-    
-    .learningResource {
-      width: 90%;
-    }
-  }
+}
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 700px; /* Increased from 500px for modal width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.modalInput {
+  width: 90%; /* Reduced from 100% to not extend as far right */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelButton {
+  padding: 10px 16px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.addButton {
+  padding: 10px 16px;
+  background-color: #1a365d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cancelButton:hover {
+  background-color: #d0d0d0;
+}
+
+.addButton:hover {
+  background-color: #2a4a7d;
+}

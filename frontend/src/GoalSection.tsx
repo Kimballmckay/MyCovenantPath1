@@ -1,22 +1,26 @@
-import React from "react";
-import styles from "./assets/styles/goalsplans.module.css";
+import React from 'react';
+import styles from './assets/styles/goalsplans.module.css';
 
 interface GoalSectionProps {
   title: string;
   goals: string[];
-  variant?: "daily" | "monthly" | "yearly";
+  variant?: 'daily' | 'monthly' | 'yearly';
+  onAddClick?: () => void;
+  onGoalClick?: (goal: string, index: number) => void;
 }
 
 const GoalSection: React.FC<GoalSectionProps> = ({
   title,
   goals,
-  variant = "daily",
+  variant = 'daily',
+  onAddClick,
+  onGoalClick,
 }) => {
   const getSectionStyles = () => {
     switch (variant) {
-      case "monthly":
+      case 'monthly':
         return styles.monthlyGoalSection;
-      case "yearly":
+      case 'yearly':
         return styles.yearlyGoalSection;
       default:
         return styles.goalSection;
@@ -25,9 +29,9 @@ const GoalSection: React.FC<GoalSectionProps> = ({
 
   const getContentStyles = () => {
     switch (variant) {
-      case "monthly":
+      case 'monthly':
         return styles.monthlyGoalContent;
-      case "yearly":
+      case 'yearly':
         return styles.yearlyGoalContent;
       default:
         return styles.goalContent;
@@ -36,9 +40,9 @@ const GoalSection: React.FC<GoalSectionProps> = ({
 
   const getTextContentStyles = () => {
     switch (variant) {
-      case "monthly":
+      case 'monthly':
         return styles.monthlyGoalTextContent;
-      case "yearly":
+      case 'yearly':
         return styles.yearlyGoalTextContent;
       default:
         return styles.goalTextContent;
@@ -50,19 +54,23 @@ const GoalSection: React.FC<GoalSectionProps> = ({
       <div className={getContentStyles()}>
         <div className={getTextContentStyles()}>
           <h2 className={styles.goalHeading}>{title}</h2>
-          <p className={styles.goalText}>
+          <div className={styles.goalText}>
             {goals.map((goal, index) => (
-              <React.Fragment key={index}>
+              <div
+                key={index}
+                className={styles.goalItem}
+                onClick={() => onGoalClick && onGoalClick(goal, index)}
+              >
                 {goal}
-                {index < goals.length - 1 && <br />}
-              </React.Fragment>
+              </div>
             ))}
-          </p>
+          </div>
         </div>
       </div>
       <button
         className={styles.editButton}
         aria-label={`Edit ${title}`}
+        onClick={onAddClick}
       >
         <div className={styles.stateLayer}>
           <span className={styles.editIcon}>+</span>
