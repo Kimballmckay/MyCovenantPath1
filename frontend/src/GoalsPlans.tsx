@@ -4,6 +4,9 @@ import styles from './assets/styles/goalsplans.module.css';
 import GoalSection from './GoalSection';
 import AddGoalModal from './AddGoalModal';
 import GoalManagementModal from './GoalManagementModal';
+import StatusBar from './components/StatusBar';
+import NavigationBar from './components/NavigationBar';
+import MenuHeader from './components/RealHeader';
 
 const GoalsPlans: React.FC = () => {
   // State for goals
@@ -134,6 +137,9 @@ const GoalsPlans: React.FC = () => {
   return (
     <main className={styles.goalsPlans}>
       <div className={styles.goalsPlans2}>
+        <StatusBar />
+        <MenuHeader />
+
         {/* Goal Sections */}
         <GoalSection
           title="Daily Goals"
@@ -192,6 +198,8 @@ const GoalsPlans: React.FC = () => {
             onComplete={handleCompleteGoal}
           />
         )}
+        </div>
+        <NavigationBar />
       </div>
     </main>
   );
