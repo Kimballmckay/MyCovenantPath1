@@ -12,7 +12,7 @@ import MyStudies from './MyStudies.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Menu />
+    <Menu/>
     <GoalsPlans />
     <MyCovenantPath />
     <MyProgress />

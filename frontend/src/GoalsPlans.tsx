@@ -39,7 +39,7 @@ const GoalsPlans: React.FC = () => {
     <main className={styles.goalsPlans}>
       <div className={styles.goalsPlans2}>
         <StatusBar />
-        <MenuHeader />
+        <MenuHeader pageName="Goals & Plans" />
 
         {/* Goal Sections */}
         <GoalSection title="Daily Goals" goals={dailyGoals} variant="daily" />

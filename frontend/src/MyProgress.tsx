@@ -12,7 +12,7 @@ function MyProgress() {
     <main className="mx-auto w-full max-w-[480px]">
       <div className="overflow-hidden w-full bg-white">
         <StatusBar />
-        <MenuHeader />
+        <MenuHeader pageName='My Progress'/>
 
         <section className="flex flex-col items-start px-3.5 mt-8 w-full">
           <ChurchAttendance />

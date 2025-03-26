@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from "../pages/Menu/Menu.module.css"; // Adjust the path from `components` to `pages/Menu`
 
+interface headerProps {
+  pageName: string;
+}
 
-const MenuHeader: React.FC = () => {
+const MenuHeader: React.FC<headerProps> = ({pageName}) => {
   return (
     <section className={styles.div}>
       <button className={styles.iconbuttontoggleable}>
@@ -17,7 +20,7 @@ const MenuHeader: React.FC = () => {
         </div>
       </button>
 
-      <h1 className={styles.pageName}>Menu</h1>
+      <h1 className={styles.pageName}>{pageName}</h1>
 
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcb595c01eea3ae1e6978bd4cb7de58b1b6093a9f41930bc01fe2c32f3e3bad5?placeholderIfAbsent=true&apiKey=3fb7e4d952c749b1b4b816af6fe83375"
