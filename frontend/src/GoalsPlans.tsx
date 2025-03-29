@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './assets/styles/goalsplans.module.css';
-import GoalSection from './GoalSection';
+import GoalSection from './components/GoalSection';
 import AddGoalModal from './AddGoalModal';
-import GoalManagementModal from './GoalManagementModal';
+import GoalManagementModal from './components/GoalManagementModal';
 import StatusBar from './components/StatusBar';
 import NavigationBar from './components/NavigationBar';
 import MenuHeader from './components/RealHeader';
@@ -198,7 +198,6 @@ const GoalsPlans: React.FC = () => {
             onComplete={handleCompleteGoal}
           />
         )}
-        </div>
         <NavigationBar />
       </div>
     </main>
