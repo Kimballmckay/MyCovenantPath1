@@ -17,7 +17,7 @@ function Menu() {
     <main className={styles.menu}>
       <div className={styles.menuComponents}>
         <StatusBar />
-        <MenuHeader />
+        <MenuHeader pageName='Menu'/>
 
         <MenuButton 
           text="My Covenant Path" 
