@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import SignInForm from './SignInForm';
+import SignInForm from './pages/SignIn/SignInForm';
 import MyProgress from './myProgress/MyProgress';
-import MyCovenantPath from './MyCovenantPath';
-import GoalsPlans from './GoalsPlans';
+import MyCovenantPath from './pages/MyCovenantPath/MyCovenantPath';
+import GoalsPlans from './pages/GoalsPlans/GoalsPlans';
 import Menu from './pages/Menu/Menu';
-import MyStudies from './MyStudies/MyStudies';
+import MyStudies from './pages/MyStudies/MyStudies';
 
 function App() {
   return (
