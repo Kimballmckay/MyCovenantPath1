@@ -6,6 +6,13 @@
   flex-direction: column;
   align-items: center;
 }
+.activeNavItem {
+  background-color:  #1e3a52;; /* Darker blue shade */
+  color: white; /* Adjust text color for contrast */
+  font-weight: bold; /* Optional: Make text bold for emphasis */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
 .menuComponents {
   flex-direction: column;
   align-items: center;
@@ -401,8 +408,6 @@
   display: flex;
 }
 .stateLayer6 {
-  background-color: #1e3a52;
-  border-radius: 16px;
   justify-content: center;
   align-self: stretch;
   align-items: center;

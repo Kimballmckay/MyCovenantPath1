@@ -10,7 +10,7 @@ const MyStudies: React.FC = () => {
     <main className="mx-auto w-full max-w-[480px]">
       <div className="overflow-hidden w-full bg-white">
         <StatusBar />
-        <MenuHeader />
+        <MenuHeader pageName='My Studies'/>
         <div className="flex flex-col items-center px-6 mt-8 w-full">
           {/* Continue Reading Section with increased spacing */}
           <div className="w-full mb-10">

@@ -50,7 +50,7 @@ const MyCovenantPath: React.FC = () => {
     <main className="main-container">
       <div className="content-wrapper">
         <StatusBar />
-        <MenuHeader />
+        <MenuHeader pageName="My Covenant Path"/>
         <TitleSection />
         <ProfileSection />
         <JumpBackInSection />
