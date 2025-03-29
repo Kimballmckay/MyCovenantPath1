@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import styles from './assets/styles/goalsplans.module.css';
+import styles from './goalsplans.module.css';
 
 interface AddGoalModalProps {
   title: string;

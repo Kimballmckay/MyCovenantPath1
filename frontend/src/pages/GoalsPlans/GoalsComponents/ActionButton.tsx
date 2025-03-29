@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./assets/styles/styles.module.css";
+import React from 'react';
+import styles from './assets/styles/styles.module.css';
 
 interface ActionButtonProps {
   text: string;

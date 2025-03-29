@@ -1,12 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-import styles from './assets/styles/goalsplans.module.css';
-import GoalSection from './GoalSection';
-import AddGoalModal from './AddGoalModal';
-import GoalManagementModal from './GoalManagementModal';
-import StatusBar from './components/StatusBar';
-import NavigationBar from './components/NavigationBar';
-import MenuHeader from './components/RealHeader';
+import styles from './GoalsComponents/goalsplans.module.css';
+import GoalSection from './GoalsComponents/GoalSection';
+import AddGoalModal from './GoalsComponents/AddGoalModal';
+import GoalManagementModal from './GoalsComponents/GoalManagementModal';
+import StatusBar from '../../components/StatusBar';
+import NavigationBar from '../../components/NavigationBar';
+import MenuHeader from '../../components/RealHeader';
 
 const GoalsPlans: React.FC = () => {
   // State for goals
@@ -116,11 +116,6 @@ const GoalsPlans: React.FC = () => {
     // Implementation for setting goals
   };
 
-  const handleLearningResource = () => {
-    console.log('Learning resource clicked');
-    // Implementation for opening learning resources
-  };
-
   const getModalTitle = () => {
     switch (activeGoalType) {
       case 'daily':
@@ -171,7 +166,12 @@ const GoalsPlans: React.FC = () => {
         {/* Learning Resource */}
         <button
           className={styles.learningResource}
-          onClick={() => window.open("https://speeches.byu.edu/talks/j-thomas-fyans/goals/", "_blank")}
+          onClick={() =>
+            window.open(
+              'https://speeches.byu.edu/talks/j-thomas-fyans/goals/',
+              '_blank'
+            )
+          }
         >
           <span className={styles.resourceIcon}>📚</span>
           <span className={styles.resourceText}>
@@ -198,7 +198,6 @@ const GoalsPlans: React.FC = () => {
             onComplete={handleCompleteGoal}
           />
         )}
-        </div>
         <NavigationBar />
       </div>
     </main>
