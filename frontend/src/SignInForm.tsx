@@ -1,11 +1,13 @@
 'use client';
 
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import styles from './InputDesign.module.css';
 
 const SignInForm: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +43,7 @@ const SignInForm: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className={styles.continueButton}>
+        <button type="submit" className={styles.continueButton} onClick={() => navigate('/MyCovenantPath')}>
           Continue
         </button>
         <div className={styles.linksContainer}>
