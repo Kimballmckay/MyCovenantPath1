@@ -4,8 +4,8 @@ import SignInForm from './SignInForm';
 import MyProgress from './myProgress/MyProgress';
 import MyCovenantPath from './MyCovenantPath';
 import GoalsPlans from './GoalsPlans';
-import MyStudies from './MyStudies';
 import Menu from './pages/Menu/Menu';
+import MyStudies from './MyStudies/MyStudies';
 
 function App() {
   return (
