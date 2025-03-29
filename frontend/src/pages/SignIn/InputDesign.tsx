@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './InputDesign.module.css';
-import StatusBar from './components/StatusBar';
+import StatusBar from '../../components/StatusBar';
 import SignInForm from './SignInForm';
 
 const InputDesign: React.FC = () => {
