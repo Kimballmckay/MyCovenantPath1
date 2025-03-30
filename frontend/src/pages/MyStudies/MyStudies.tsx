@@ -6,47 +6,29 @@ import NavigationBar from '../../components/NavigationBar.tsx';
 
 const MyStudies: React.FC = () => {
   return (
-    <main className="mx-auto w-full max-w-[480px]">
+    <main className="mx-auto w-full max-w-sm px-4">
       <div className="overflow-hidden w-full bg-white">
         <StatusBar />
-        <center>
+        <div className="flex justify-center">
           <MenuHeader pageName="My Studies" />
-        </center>
-        <div className="flex flex-col items-center px-6 mt-8 w-full">
-          {/* Continue Reading Section with increased spacing */}
-          <div className="w-full mb-10">
-            {/* Section header */}
+        </div>
 
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginBottom: '20px',
-              }}
-              className="flex-row items-center"
-            >
+        <div className="flex flex-col items-center px-6 mt-8 w-full">
+          {/* Continue Reading Section */}
+          <div className="w-full mb-10">
+            <div className="flex items-center mb-5">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e9de21cab42124d592f705f8ddcf19ad0566684?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="w-6 h-6 mr-3"
                 alt="Continue Reading Icon"
-                style={{ marginRight: '12px' }}
               />
               <h2 className="text-xl font-medium text-black">
+                <i className="bi bi-bookmark"></i>
                 Continue Reading
               </h2>
             </div>
 
-            {/* Articles with increased spacing */}
-            <div
-              className="flex flex-row w-full"
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                gap: '16px',
-              }}
-            >
+            <div className="flex flex-row w-full justify-between gap-4">
               <article className="flex flex-col items-center">
                 <h3 className="text-sm leading-none text-center text-black mb-2">
                   Yesterday
@@ -88,37 +70,21 @@ const MyStudies: React.FC = () => {
             </div>
           </div>
 
-          {/* What's Next Section with increased spacing */}
+          {/* What's Next Section */}
           <div className="w-full mb-10">
-            {/* Section header */}
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginBottom: '20px',
-              }}
-              className="flex-row items-center"
-            >
+            <div className="flex items-center mb-5">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/af38d9278bbf8c92c1b70da1ecff08971de58922?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="w-6 h-6 mr-3"
                 alt="What's Next Icon"
-                style={{ marginRight: '12px' }}
               />
-              <h2 className="text-xl font-medium text-black">What's Next</h2>
+              <h2 className="text-xl font-medium text-black">
+                <i className="bi bi-book"></i>
+                What's Next
+              </h2>
             </div>
 
-            {/* Images with increased spacing */}
-            <div
-              className="flex flex-row"
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                gap: '20px',
-              }}
-            >
+            <div className="flex flex-row justify-between gap-5">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/17de4cf0292e92894d8c97bfcc0e526296d5971a?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="object-contain rounded-md aspect-[1.78] w-[158px]"
@@ -132,39 +98,21 @@ const MyStudies: React.FC = () => {
             </div>
           </div>
 
-          {/* Additional Resources Section with increased spacing */}
+          {/* Additional Resources Section */}
           <div className="w-full mb-10">
-            {/* Section header */}
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginBottom: '20px',
-              }}
-              className="flex-row items-center"
-            >
+            <div className="flex items-center mb-5">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/075c918e0d0293629d365c26f193fb3e36f4fc71?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="w-6 h-6 mr-3"
                 alt="Additional Resources Icon"
-                style={{ marginRight: '12px' }}
               />
               <h2 className="text-xl font-medium text-black">
+                <i className="bi bi-journals"></i>
                 Additional Resources
               </h2>
             </div>
 
-            {/* Resource images with increased spacing */}
-            <div
-              className="flex flex-row"
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                gap: '12px',
-              }}
-            >
+            <div className="flex flex-row justify-between gap-3">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ed880868580015e8f2ccefd735a41d71bc249b4?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="object-contain rounded-md aspect-[0.78] w-[69px]"
@@ -188,9 +136,10 @@ const MyStudies: React.FC = () => {
             </div>
           </div>
         </div>
-        <center>
+
+        <div className="flex justify-center">
           <NavigationBar />
-        </center>
+        </div>
       </div>
     </main>
   );

@@ -49,12 +49,15 @@ const MyCovenantPath: React.FC = () => {
   return (
     <main className="main-container">
       <div className="content-wrapper">
-        <center><StatusBar /></center>
-        <center><MenuHeader pageName="My Covenant Path"/></center>
-        <div className='page-container'>
-        <TitleSection />
-        <ProfileSection />
-        <JumpBackInSection />
+        <center>
+          <StatusBar />
+        </center>
+        <center>
+          <MenuHeader pageName="My Covenant Path" />
+        </center>
+        <div className="page-container">
+          <ProfileSection />
+          <JumpBackInSection />
         </div>
         <NavigationBar />
       </div>
@@ -62,6 +65,7 @@ const MyCovenantPath: React.FC = () => {
   );
 };
 
+// Removed; not used because the title is in the header
 const TitleSection: React.FC = () => {
   return (
     <div className="title-section">
