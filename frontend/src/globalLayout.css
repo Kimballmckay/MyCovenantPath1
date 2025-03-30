@@ -1,0 +1,11 @@
+/* src/globalLayout.css */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Take full width of parent */
+    max-width: 366px; /* Match the max-width of your RealHeader's div */
+    margin: 0 auto; /* Center the container on the page */
+    padding: 16px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}

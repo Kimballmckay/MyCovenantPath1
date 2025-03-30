@@ -4,6 +4,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a nice shadow */
   border-radius: 10px; /* Optional: Rounds the edges */
   padding: 20px; /* Adds spacing inside */
+  overflow: hidden;
 }
 
 /* Status Bar */
@@ -34,7 +35,7 @@
 .title-section {
   text-align: center;
   margin-top: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .main-title {
@@ -54,6 +55,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  padding: 10px;
 }
 
 .profile-info {
@@ -104,7 +106,7 @@
 .jump-back-title {
   font-size: 40px;
   font-weight: bold;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .carousel-container {
   width: 100%;
@@ -126,13 +128,14 @@
 }
 
 .carousel-item {
-  flex: 0 0 calc(66.67% - 10px); /* 1 and 1/2 items per view */
+  flex: 0 0 calc(100% / 1 - 20px); /* One item at a time, minus the gap */
   scroll-snap-align: start;
   background: white;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
+  box-sizing: border-box; /* Important! Include padding in the element's total width */
 }
 
 .carousel-image {
@@ -150,6 +153,11 @@
 .carousel-article-description {
   font-size: 14px;
   margin-top: 5px;
+  max-width: 70%; /* Example: Text will take up a maximum of 80% of its container's width */
+  /* You can also use a fixed pixel value: */
+  /* max-width: 280px; */
+  margin-left: auto; /* To center the text if it's not taking full width */
+  margin-right: auto;
 }
 
 .carousel-read-more {
