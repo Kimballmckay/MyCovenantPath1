@@ -49,11 +49,13 @@ const MyCovenantPath: React.FC = () => {
   return (
     <main className="main-container">
       <div className="content-wrapper">
-        <StatusBar />
-        <MenuHeader />
+        <center><StatusBar /></center>
+        <center><MenuHeader pageName="My Covenant Path"/></center>
+        <div className='page-container'>
         <TitleSection />
         <ProfileSection />
         <JumpBackInSection />
+        </div>
         <NavigationBar />
       </div>
     </main>

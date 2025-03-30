@@ -1,6 +1,5 @@
 'use client';
 import * as React from 'react';
-import styles from './assets/styles/goalsplans.module.css';
 import StatusBar from '../../components/StatusBar.tsx';
 import MenuHeader from '../../components/RealHeader.tsx';
 import NavigationBar from '../../components/NavigationBar.tsx';
@@ -10,11 +9,14 @@ const MyStudies: React.FC = () => {
     <main className="mx-auto w-full max-w-[480px]">
       <div className="overflow-hidden w-full bg-white">
         <StatusBar />
-        <MenuHeader />
+        <center>
+          <MenuHeader pageName="My Studies" />
+        </center>
         <div className="flex flex-col items-center px-6 mt-8 w-full">
           {/* Continue Reading Section with increased spacing */}
           <div className="w-full mb-10">
             {/* Section header */}
+
             <div
               style={{
                 display: 'flex',
@@ -46,10 +48,10 @@ const MyStudies: React.FC = () => {
               }}
             >
               <article className="flex flex-col items-center">
-                <h3 className="text-base leading-none text-center text-black mb-4">
+                <h3 className="text-sm leading-none text-center text-black mb-2">
                   Yesterday
                 </h3>
-                <div className="rounded-md w-[92px] aspect-[1.034]">
+                <div className="rounded-md w-[46px] aspect-[1.034]">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/91690857356e7ea76759a3cf7a25a2446a6d7bcf?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                     className="object-cover w-full h-full rounded-md"
@@ -186,7 +188,9 @@ const MyStudies: React.FC = () => {
             </div>
           </div>
         </div>
-        <NavigationBar />
+        <center>
+          <NavigationBar />
+        </center>
       </div>
     </main>
   );

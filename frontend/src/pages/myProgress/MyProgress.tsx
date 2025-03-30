@@ -7,10 +7,10 @@ import MenuHeader from '../../components/RealHeader';
 
 function MyProgress() {
   return (
-    <main className="mx-auto w-full max-w-[480px]">
+    <main className="mx-auto w-full">
       <div className="overflow-hidden w-full bg-white">
         <StatusBar />
-        <MenuHeader />
+        <MenuHeader pageName="My Progress" />
 
         <section className="flex flex-col items-start px-3.5 mt-8 w-full">
           <ChurchAttendance />
