@@ -1,0 +1,200 @@
+.main-container {
+  width: 100%;
+  max-width: 480px; /* Keeps the mobile-friendly width */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a nice shadow */
+  border-radius: 10px; /* Optional: Rounds the edges */
+  padding: 20px; /* Adds spacing inside */
+  overflow: hidden;
+}
+
+/* Status Bar */
+.status-bar {
+  padding-top: 5px;
+  min-height: 52px;
+  background-color: white;
+}
+
+.status-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-time {
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 590;
+}
+
+.status-icons {
+  width: 124px;
+  height: 10px;
+}
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.username-box,
+.snapshot-box {
+  padding: 8px;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+.progress-container {
+  border: 1px solid black;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.progress-percentage {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.progress-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+  background: conic-gradient(black 0% 47%, transparent 47% 100%);
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Jump Back Section */
+.jump-back-title {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.carousel-item {
+  flex: 0 0 calc(100% / 1 - 20px); /* One item at a time, minus the gap */
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box; /* Important! Include padding in the element's total width */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-article-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.carousel-article-description {
+  font-size: 14px;
+  margin-top: 5px;
+  max-width: 70%; /* Example: Text will take up a maximum of 80% of its container's width */
+  /* You can also use a fixed pixel value: */
+  /* max-width: 280px; */
+  margin-left: auto; /* To center the text if it's not taking full width */
+  margin-right: auto;
+}
+
+.carousel-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dots container */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Individual dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Active dot (highlighted) */
+.dot.active {
+  background-color: black;
+}
+
+/* Bottom Navigation */
+.bottom-navigation {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #e0e0e0;
+}
