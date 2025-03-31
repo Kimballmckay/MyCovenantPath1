@@ -4,6 +4,7 @@ import ChurchAttendance from './ChurchAttendance';
 import TopicsStudied from './TopicsStudied';
 import TempleAttendance from './TempleAttendance';
 import MenuHeader from '../../components/RealHeader';
+import styles from '../Menu/Menu.module.css'; // Custom CSS for the menu page
 
 function MyProgress() {
   return (
@@ -16,9 +17,20 @@ function MyProgress() {
           <ChurchAttendance />
           <TopicsStudied />
           <TempleAttendance />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Hi</p>
         </section>
 
-        <NavigationBar />
+        <div className="navigationbar">
+          <NavigationBar />
+        </div>
       </div>
     </main>
   );

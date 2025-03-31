@@ -7,7 +7,7 @@
   align-items: center;
 }
 .activeNavItem {
-  background-color:  #1e3a52;; /* Darker blue shade */
+  background-color: #1e3a52; /* Darker blue shade */
   color: white; /* Adjust text color for contrast */
   font-weight: bold; /* Optional: Make text bold for emphasis */
   border-radius: 8px; /* Optional: Add rounded corners */
@@ -46,7 +46,12 @@
   margin-bottom: auto;
   padding-left: 16px;
   padding-right: 6px;
-  font-family: SF Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    SF Pro,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 17px;
   font-weight: 590;
   line-height: 1;
@@ -145,7 +150,12 @@
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  font-family: Noto Rashi Hebrew, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Noto Rashi Hebrew,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 30px;
@@ -168,7 +178,12 @@
   max-width: 100%;
   margin-top: 58px;
   padding: 27px 22px;
-  font-family: Noto Rashi Hebrew, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Noto Rashi Hebrew,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1;
@@ -183,7 +198,12 @@
   max-width: 100%;
   margin-top: 25px;
   padding: 39px 29px;
-  font-family: Noto Rashi Hebrew, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Noto Rashi Hebrew,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1;
@@ -198,7 +218,12 @@
   max-width: 100%;
   margin-top: 25px;
   padding: 26px 37px;
-  font-family: Noto Rashi Hebrew, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Noto Rashi Hebrew,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 30px;
@@ -213,7 +238,12 @@
   max-width: 100%;
   margin-top: 25px;
   padding: 38px 40px;
-  font-family: Noto Rashi Hebrew, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Noto Rashi Hebrew,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1;
@@ -221,13 +251,15 @@
 .navigationbar {
   background-color: #6a8c9f;
   justify-content: start;
-  align-self: stretch;
-  align-items: start;
+  align-items: center; /* Align items to the center vertically */
   gap: 8px;
-  margin-top: 82px;
   padding-left: 8px;
   padding-right: 8px;
   display: flex;
+  position: fixed; /* Fix the navbar to the bottom */
+  bottom: 0; /* Position the navbar at the bottom of the screen */
+  width: 100%; /* Ensure it takes up the full width of the screen */
+  z-index: 1000; /* Ensure it appears above other content */
 }
 .navitem1 {
   flex-direction: column;
@@ -271,7 +303,11 @@
   text-align: center;
   letter-spacing: 0.5px;
   margin-top: 4px;
-  font-family: Roboto, -apple-system, Helvetica, sans-serif;
+  font-family:
+    Roboto,
+    -apple-system,
+    Helvetica,
+    sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 1;
@@ -448,14 +484,14 @@
   border-radius: 2px;
   width: 100%; /* Make buttons full width */
   padding: 10px 15px; /* Consistent padding */
-  font-family: Noto Rashi Hebrew, sans-serif;
+  font-family:
+    Noto Rashi Hebrew,
+    sans-serif;
   font-size: 15px;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
 }
-
-
 
 /* Add or update these properties in your existing Menu.module.css */
 /* Don't change colors, fonts, borders, etc. - only width and layout properties */

@@ -6,7 +6,8 @@ import MyCovenantPath from './pages/MyCovenantPath/MyCovenantPath';
 import GoalsPlans from './pages/GoalsPlans/GoalsPlans';
 import Menu from './pages/Menu/Menu';
 import MyStudies from './pages/MyStudies/MyStudies';
-import './globalLayout.css'
+import './globalLayout.css';
+import styles from './pages/Menu/Menu.module.css';
 
 function App() {
   return (

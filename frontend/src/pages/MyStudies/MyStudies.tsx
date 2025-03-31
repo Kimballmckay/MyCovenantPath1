@@ -3,6 +3,7 @@ import * as React from 'react';
 import StatusBar from '../../components/StatusBar.tsx';
 import MenuHeader from '../../components/RealHeader.tsx';
 import NavigationBar from '../../components/NavigationBar.tsx';
+import '../Menu/Menu.module.css'; // Custom CSS for the menu page
 
 const MyStudies: React.FC = () => {
   return (
@@ -17,13 +18,12 @@ const MyStudies: React.FC = () => {
           {/* Continue Reading Section */}
           <div className="w-full mb-10">
             <div className="flex items-center mb-5">
-              <img
+              {/*<img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e9de21cab42124d592f705f8ddcf19ad0566684?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="w-6 h-6 mr-3"
                 alt="Continue Reading Icon"
-              />
+              />*/}
               <h2 className="text-xl font-medium text-black">
-                <i className="bi bi-bookmark"></i>
                 Continue Reading
               </h2>
             </div>
@@ -73,15 +73,12 @@ const MyStudies: React.FC = () => {
           {/* What's Next Section */}
           <div className="w-full mb-10">
             <div className="flex items-center mb-5">
-              <img
+              {/* <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/af38d9278bbf8c92c1b70da1ecff08971de58922?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="w-6 h-6 mr-3"
                 alt="What's Next Icon"
-              />
-              <h2 className="text-xl font-medium text-black">
-                <i className="bi bi-book"></i>
-                What's Next
-              </h2>
+              /> */}
+              <h2 className="text-xl font-medium text-black">What's Next</h2>
             </div>
 
             <div className="flex flex-row justify-between gap-5">
@@ -101,13 +98,12 @@ const MyStudies: React.FC = () => {
           {/* Additional Resources Section */}
           <div className="w-full mb-10">
             <div className="flex items-center mb-5">
-              <img
+              {/* <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/075c918e0d0293629d365c26f193fb3e36f4fc71?placeholderIfAbsent=true&apiKey=67d06c088f3849ce8c0f6314319fc847"
                 className="w-6 h-6 mr-3"
                 alt="Additional Resources Icon"
-              />
+              /> */}
               <h2 className="text-xl font-medium text-black">
-                <i className="bi bi-journals"></i>
                 Additional Resources
               </h2>
             </div>
@@ -137,7 +133,7 @@ const MyStudies: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="navigationbar">
           <NavigationBar />
         </div>
       </div>

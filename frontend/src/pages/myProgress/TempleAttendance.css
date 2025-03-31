@@ -1,0 +1,136 @@
+.temple-attendance {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.header {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.temple-visits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.temple-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.temple-image-small {
+  width: 80px; /* Adjust the width as needed */
+  height: auto;
+  margin-bottom: 8px; /* Space between image and date */
+}
+
+.temple-date-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.no-visits {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.button-container {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.btn-add,
+.btn-add-visit {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.btn-add:hover,
+.btn-add-visit:hover {
+  background-color: #0056b3;
+}
+
+.calendar-container {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  margin: 1rem auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-days-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.calendar-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* Ensures each day has a fixed size */
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calendar-day.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.calendar-day.visited {
+  background-color: #28a745;
+}
+
+.calendar-day:hover {
+  background-color: #f1f1f1;
+}
+
+.calendar-day:not(.empty) {
+  display: inline-flex; /* Ensures each day stays in a row */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design for Smaller Screens (like iPhone) */
+@media (max-width: 600px) {
+  .calendar-day {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .calendar-header h3 {
+    font-size: 0.9rem;
+  }
+
+  .calendar-days-header {
+    font-size: 0.65rem;
+  }
+}

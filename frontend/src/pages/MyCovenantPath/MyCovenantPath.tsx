@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import StatusBar from '../../components/StatusBar.tsx';
 import MenuHeader from '../../components/RealHeader.tsx';
 import NavigationBar from '../../components/NavigationBar.tsx';
+import styles from '../Menu/Menu.module.css'; // Custom CSS for the menu page
 
 const articles = [
   {
@@ -47,21 +48,23 @@ const articles = [
 
 const MyCovenantPath: React.FC = () => {
   return (
-    <main className="main-container">
-      <div className="content-wrapper">
-        <center>
-          <StatusBar />
-        </center>
-        <center>
-          <MenuHeader pageName="My Covenant Path" />
-        </center>
-        <div className="page-container">
-          <ProfileSection />
-          <JumpBackInSection />
+    <>
+      <main className="main-container">
+        <div className="content-wrapper">
+          <center>
+            <StatusBar />
+          </center>
+          <center>
+            <MenuHeader pageName="My Covenant Path" />
+          </center>
+          <div className="page-container">
+            <ProfileSection />
+            <JumpBackInSection />
+          </div>
         </div>
-        <NavigationBar />
-      </div>
-    </main>
+      </main>
+      <NavigationBar />
+    </>
   );
 };
 
